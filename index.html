@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
 
-    <!-- custome color -->
+    <!-- custome color,custom width -->
     <script>
       tailwind.config = {
         theme: {
@@ -80,12 +80,22 @@
         </div>
 
         <div>
-          <div class="form-control">
+          
+          <div class="relative w-48 hidden lg:block">
             <input
-              type="text"
-              placeholder="Search"
+              type="search"
               class="input input-bordered w-24 hidden rounded-full md:w-auto lg:block"
+              placeholder="Search here"
+              required
             />
+            <button
+              type="submit"
+              class="absolute top-0 right-0 le text-sm font-medium h-full text-white"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3965 17.9996 12.4887 17.9996 10.4995C17.9996 8.51035 17.2094 6.60262 15.8028 5.19605C14.3962 3.78947 12.4885 2.99927 10.4993 2.99927C8.51011 2.99927 6.60238 3.78947 5.19581 5.19605C3.78923 6.60262 2.99902 8.51035 2.99902 10.4995C2.99902 12.4887 3.78923 14.3965 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
           </div>
 
           <div class="dropdown dropdown-end">
@@ -116,11 +126,22 @@
               <li><a>All Fruits</a></li>
               <li>
                 <div class="form-control">
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    class="input input-bordered w-full  lg:block"
-                  />
+                  <div class="relative w-48  lg:hidden">
+                    <input
+                      type="search"
+                      class="input input-bordered w-40  rounded-full  lg:hidden"
+                      placeholder="Search here"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      class="absolute top-0 right-10 le text-sm font-medium h-full text-white"
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3965 17.9996 12.4887 17.9996 10.4995C17.9996 8.51035 17.2094 6.60262 15.8028 5.19605C14.3962 3.78947 12.4885 2.99927 10.4993 2.99927C8.51011 2.99927 6.60238 3.78947 5.19581 5.19605C3.78923 6.60262 2.99902 8.51035 2.99902 10.4995C2.99902 12.4887 3.78923 14.3965 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -357,39 +378,53 @@
       <!-- Deal of the day section -->
       <section>
 
-        <div class="hero mt-10 mb-12 flex flex-col md:flex-row justify-between md:mt-52 ">
+        <div class="hero mt-10 mb-12 flex flex-col lg:flex-row justify-between md:mt-52 ">
   
-            <div class="sm:text-center md:text-left">
+            <div class="sm:text-center lg:text-left">
               <h1 class="text-3xl text-black md:text-5xl font-extrabold">Deal of the day</h1>
               <p class="py-6">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
             <div>
   
-              <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+              <div class="grid grid-flow-col gap-3 text-center auto-cols-max">
+                
+                
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-5xl">
-                    <span style="--value:15;"></span>
+                    <span class="font-extrabold text-5xl"  style="--value:15;"></span>
+                    <svg class="ml-2 md:ml-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 6.75C11.8011 6.75 11.6103 6.67098 11.4697 6.53033C11.329 6.38968 11.25 6.19891 11.25 6C11.25 5.80109 11.329 5.61032 11.4697 5.46967C11.6103 5.32902 11.8011 5.25 12 5.25C12.1989 5.25 12.3897 5.32902 12.5303 5.46967C12.671 5.61032 12.75 5.80109 12.75 6C12.75 6.19891 12.671 6.38968 12.5303 6.53033C12.3897 6.67098 12.1989 6.75 12 6.75ZM12 12.75C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12C11.25 11.8011 11.329 11.6103 11.4697 11.4697C11.6103 11.329 11.8011 11.25 12 11.25C12.1989 11.25 12.3897 11.329 12.5303 11.4697C12.671 11.6103 12.75 11.8011 12.75 12C12.75 12.1989 12.671 12.3897 12.5303 12.5303C12.3897 12.671 12.1989 12.75 12 12.75ZM12 18.75C11.8011 18.75 11.6103 18.671 11.4697 18.5303C11.329 18.3897 11.25 18.1989 11.25 18C11.25 17.8011 11.329 17.6103 11.4697 17.4697C11.6103 17.329 11.8011 17.25 12 17.25C12.1989 17.25 12.3897 17.329 12.5303 17.4697C12.671 17.6103 12.75 17.8011 12.75 18C12.75 18.1989 12.671 18.3897 12.5303 18.5303C12.3897 18.671 12.1989 18.75 12 18.75Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </span>
-                  days
+                  <span class="mr-7">days</span>
+                  
+                </div>
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span class="font-extrabold text-5xl" style="--value:10;"></span>
+                    <svg class="ml-2 md:ml-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 6.75C11.8011 6.75 11.6103 6.67098 11.4697 6.53033C11.329 6.38968 11.25 6.19891 11.25 6C11.25 5.80109 11.329 5.61032 11.4697 5.46967C11.6103 5.32902 11.8011 5.25 12 5.25C12.1989 5.25 12.3897 5.32902 12.5303 5.46967C12.671 5.61032 12.75 5.80109 12.75 6C12.75 6.19891 12.671 6.38968 12.5303 6.53033C12.3897 6.67098 12.1989 6.75 12 6.75ZM12 12.75C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12C11.25 11.8011 11.329 11.6103 11.4697 11.4697C11.6103 11.329 11.8011 11.25 12 11.25C12.1989 11.25 12.3897 11.329 12.5303 11.4697C12.671 11.6103 12.75 11.8011 12.75 12C12.75 12.1989 12.671 12.3897 12.5303 12.5303C12.3897 12.671 12.1989 12.75 12 12.75ZM12 18.75C11.8011 18.75 11.6103 18.671 11.4697 18.5303C11.329 18.3897 11.25 18.1989 11.25 18C11.25 17.8011 11.329 17.6103 11.4697 17.4697C11.6103 17.329 11.8011 17.25 12 17.25C12.1989 17.25 12.3897 17.329 12.5303 17.4697C12.671 17.6103 12.75 17.8011 12.75 18C12.75 18.1989 12.671 18.3897 12.5303 18.5303C12.3897 18.671 12.1989 18.75 12 18.75Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="mr-7">hours</span>
+                  
                 </div> 
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-5xl">
-                    <span style="--value:10;"></span>
+                    <span class="font-extrabold text-5xl" style="--value:24;"></span>
+                    <svg class="ml-2 md:ml-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 6.75C11.8011 6.75 11.6103 6.67098 11.4697 6.53033C11.329 6.38968 11.25 6.19891 11.25 6C11.25 5.80109 11.329 5.61032 11.4697 5.46967C11.6103 5.32902 11.8011 5.25 12 5.25C12.1989 5.25 12.3897 5.32902 12.5303 5.46967C12.671 5.61032 12.75 5.80109 12.75 6C12.75 6.19891 12.671 6.38968 12.5303 6.53033C12.3897 6.67098 12.1989 6.75 12 6.75ZM12 12.75C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12C11.25 11.8011 11.329 11.6103 11.4697 11.4697C11.6103 11.329 11.8011 11.25 12 11.25C12.1989 11.25 12.3897 11.329 12.5303 11.4697C12.671 11.6103 12.75 11.8011 12.75 12C12.75 12.1989 12.671 12.3897 12.5303 12.5303C12.3897 12.671 12.1989 12.75 12 12.75ZM12 18.75C11.8011 18.75 11.6103 18.671 11.4697 18.5303C11.329 18.3897 11.25 18.1989 11.25 18C11.25 17.8011 11.329 17.6103 11.4697 17.4697C11.6103 17.329 11.8011 17.25 12 17.25C12.1989 17.25 12.3897 17.329 12.5303 17.4697C12.671 17.6103 12.75 17.8011 12.75 18C12.75 18.1989 12.671 18.3897 12.5303 18.5303C12.3897 18.671 12.1989 18.75 12 18.75Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </span>
-                  hours
+                  <span class="mr-7">min</span>
                 </div> 
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-5xl">
-                    <span style="--value:24;"></span>
-                  </span>
-                  min
-                </div> 
-                <div class="flex flex-col">
-                  <span class="countdown font-mono text-5xl">
-                    <span style="--value:34;"></span>
+                    <span class="font-extrabold text-5xl" style="--value:34;"></span>
                   </span>
                   sec
                 </div>
+
               </div>
   
   
@@ -729,19 +764,7 @@
             </div>
   
   
-  
-  
-            
-            
-            
-            
-            
-            
-            
-            
-  
-  
-  
+ 
   
             </div>
             
@@ -1166,18 +1189,25 @@
     <!-- footer section -->
     <footer class="footer footer-center p-10 bg-black  text-white rounded mt-60">
 
-      <div class="flex items-center gap-4 mt-32">
+      <div class="flex items-center mt-20 gap-4 lg:mt-32">
         <img class="w-12 " src="./images/logo.png" alt="" />
         <h1 class="text-5xl font-bold ">Fruit Burst</h1>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-flow-col gap-8 mt-10 mb-10">
-        <a class="link link-hover">Home</a> 
-        <a class="link link-hover">About us</a> 
-        <a class="link link-hover">Shop</a> 
-        <a class="link link-hover">All Fruits</a> 
-        <a class="link link-hover">Support</a>
-        <a class="link link-hover">My Account</a>
+      <div class="flex flex-col gap-8  md:flex-row  mt-10 mb-10">
+        <div class="flex gap-8">
+          <a class="link link-hover">Home</a> 
+          <a class="link link-hover">About us</a> 
+          <a class="link link-hover">Shop</a> 
+          <a class="link link-hover">All Fruits</a>
+       </div>
+
+        <div class="flex gap-8">
+          <a class="link link-hover">Support</a>
+          <a class="link link-hover">My Account</a>
+        </div>
+        
+        
       </div> 
       <div>
         <div class="grid grid-flow-col gap-8 mb-12">
